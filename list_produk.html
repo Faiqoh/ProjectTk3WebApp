@@ -52,7 +52,7 @@
                 <td><img src="img/gambar1.jpg" class="img-fluid" width="30px"></td>
                 <td>
                   <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  <a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
               </tr>
               <tr>
@@ -63,7 +63,7 @@
                 <td><img src="img/gambar1.jpg" class="img-fluid" width="30px"></td>
                 <td>
                   <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  <a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
               </tr>
               <tr>
@@ -74,7 +74,7 @@
                 <td><img src="img/gambar1.jpg" class="img-fluid" width="30px"></td>
                 <td>
                   <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  <a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
               </tr>
               <tr>
@@ -85,7 +85,7 @@
                 <td><img src="img/gambar1.jpg" class="img-fluid" width="30px"></td>
                 <td>
                   <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  <a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
               </tr>         
               <tr>
@@ -96,7 +96,7 @@
                 <td><img src="img/gambar1.jpg" class="img-fluid" width="30px"></td>
                 <td>
                   <a href="#editModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                  <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                  <a href="#deleteModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                 </td>
               </tr> 
             </tbody>
@@ -181,6 +181,30 @@
             <div class="modal-footer">
               <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
               <input type="submit" class="btn btn-info" value="Save">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Delete Modal -->
+
+    <div id="deleteModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">            
+              <h5 class="modal-title">Hapus Produk</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">          
+              <p>Are you sure you want to delete these Records?</p>
+              <p class="text-warning"><small>This action cannot be undone.</small></p>
+            </div>
+            <div class="modal-footer">
+              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+              <input type="submit" class="btn btn-danger" value="Delete">
             </div>
           </form>
         </div>
