@@ -1,17 +1,29 @@
 const jwt = require("jsonwebtoken");
-
-module.exports = Auth=(req,res,next)=>{
-    const token = req.cookies.access_token;
-    if (!token) {
-        return res.sendStatus(403);
-    }
-    try {
-        const data = jwt.verify(token, "NA_KEY");
-        console.log(data);
-        req.userId = data.id;
-        req.userRole = data.role;
-        return next();
-    } catch {
-        return res.sendStatus(403);
+const Auth = {
+    API : (req,res,next)=>{
+        const token = req.cookies.access_token;
+        if (!token) {
+            return res.sendStatus(403);
+        }
+        try {
+            jwt.verify(token, "NA_KEY");
+            return next();
+        } catch {
+            return res.sendStatus(403);
+        }
+    },
+    UI: (req,res,next)=>{
+        const token = req.cookies.access_token;
+        if (!token) {
+            return res.redirect("/login");
+        }
+        try {
+            jwt.verify(token, "NA_KEY");
+            return next();
+        } catch {
+            return res.redirect("/login");
+        }
     }
 }
+
+module.exports = Auth

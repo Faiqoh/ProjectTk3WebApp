@@ -24,8 +24,8 @@
                   <p class="text-white-50 mb-5">Please enter your login and password!</p>
 
                   <div class="form-outline form-white mb-4">
-                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                    <label class="form-label" for="typeEmailX">Email</label>
+                    <input type="text" id="typeUsernameX" class="form-control form-control-lg" />
+                    <label class="form-label" for="typeUsernameX">Username</label>
                   </div>
 
                   <div class="form-outline form-white mb-4">
@@ -33,7 +33,7 @@
                     <label class="form-label" for="typePasswordX">Password</label>
                   </div>
 
-                  <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                  <button class="btn btn-outline-light btn-lg px-5" onclick="DoLogin()" type="submit">Login</button>
                 </div>
               </div>
             </div>
@@ -49,10 +49,23 @@
     <!-- bootstrap js -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- bootstrap js -->
+
+    <script src="assets/app/helper.js"></script>
     
 
     <script>
-        
+        const DoLogin = ()=>{
+          let param = {
+            username : $("#typeUsernameX").val(),
+            password : $("#typePasswordX").val()
+          }
+
+          request.post("/api/user/login",param,(data)=>{
+            if (data) {
+              location.href = "/product"
+            }
+          })
+        }
     </script>
 </body>
 
